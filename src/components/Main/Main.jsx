@@ -7,6 +7,8 @@ const Main = () => {
     const [courses, setCourses] = useState([]);
     const [hours, setHours] = useState(0);
     const [selectedCourses, setSelectedCourses] = useState([]);
+    const [remaining, setRemaining] = useState(20);
+    const [totalUSD, setTotalUSD] = useState(0);
 
     useEffect(() => {
         async function loadData() {
@@ -23,16 +25,22 @@ const Main = () => {
         const isExist = selectedCourses.find(course => course.id === id);
 
         if(!isExist) {
-            setHours(hours + course.credit)
+            setRemaining(remaining - course.credit)
+            
             const newSelectedCourses = [...selectedCourses, course];
             setSelectedCourses(newSelectedCourses);
+            
+            setHours(hours + course.credit)
+
+            setTotalUSD(totalUSD + course.price);
+
         }
     }
-
+    
     return (
-        <div className="md:flex gap-6 justify-center">
+        <div className="lg:flex gap-6 justify-center">
             <Courses courses={courses} handleSelectedCourses={handleSelectedCourses}/>
-            <Details selectedCourses={selectedCourses} hours={hours}/>
+            <Details remaining={remaining} selectedCourses={selectedCourses} hours={hours} totalUSD={totalUSD}/>
         </div>
     );
 };
