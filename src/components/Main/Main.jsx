@@ -6,6 +6,7 @@ import Details from "../Details/Details";
 const Main = () => {
     const [courses, setCourses] = useState([]);
     const [hours, setHours] = useState(0);
+    const [selectedCourses, setSelectedCourses] = useState([]);
 
     useEffect(() => {
         async function loadData() {
@@ -20,12 +21,14 @@ const Main = () => {
 
     function handleSelectedCourses(course) {
         setHours(hours + course.credit)
+        const newSelectedCourses = [...selectedCourses, course];
+        setSelectedCourses(newSelectedCourses);
     }
     
     return (
         <div className="md:flex gap-6 justify-center">
             <Courses courses={courses} handleSelectedCourses={handleSelectedCourses}/>
-            <Details hours={hours}/>
+            <Details selectedCourses={selectedCourses} hours={hours}/>
         </div>
     );
 };
