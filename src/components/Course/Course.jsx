@@ -3,7 +3,7 @@ import { FiDollarSign } from 'react-icons/fi'
 import { BiBookOpen } from 'react-icons/bi'
 
 
-const Course = ({ course }) => {
+const Course = ({ course, handleSelectedCourses }) => {
     const { id, cover_img, title, description, price, credit } = course;
 
     return (
@@ -26,7 +26,7 @@ const Course = ({ course }) => {
                         </div>
                     </div>
                     <div className="w-full">
-                        <button className="btn bg-[#2F80ED] hover:bg-[#2F80ED] text-white normal-case text-lg font-semibold w-full">Select</button>
+                        <button onClick={()=> handleSelectedCourses(course)} className="btn bg-[#2F80ED] hover:bg-[#2F80ED] text-white normal-case text-lg font-semibold w-full">Select</button>
                     </div>
                 </div>
             </div>
@@ -36,6 +36,7 @@ const Course = ({ course }) => {
 
 Course.propTypes = {
     course: PropTypes.object.isRequired,
+    handleSelectedCourses: PropTypes.func.isRequired,
 }
 
 export default Course;

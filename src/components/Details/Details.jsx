@@ -1,4 +1,6 @@
-const Details = () => {
+import PropTypes from 'prop-types';
+
+const Details = ({hours}) => {
     return (
         <div className="md:w-1/4">
             <div className="bg-white rounded-lg p-6">
@@ -7,7 +9,7 @@ const Details = () => {
                 <div>
                     <h1 className="text-[#1C1B1B] text-xl font-bold mt-4 mb-5">Course Name</h1>
                     <hr />
-                    <h1 className="text-[#1C1B1BCC] text-base font-medium my-4">Total Credit Hour : 13</h1>
+                    <h1 className="text-[#1C1B1BCC] text-base font-medium my-4">Total Credit Hour : {hours}</h1>
                     <hr />
                     <h1 className="text-[#1C1B1BCC] text-base font-semibold mt-4">Total Price : 48000 USD</h1>
                 </div>
@@ -15,5 +17,9 @@ const Details = () => {
         </div>
     );
 };
+
+Details.propTypes = {
+    hours: PropTypes.number.isRequired,
+}
 
 export default Details;

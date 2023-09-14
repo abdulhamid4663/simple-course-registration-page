@@ -5,6 +5,7 @@ import Details from "../Details/Details";
 
 const Main = () => {
     const [courses, setCourses] = useState([]);
+    const [hours, setHours] = useState(0);
 
     useEffect(() => {
         async function loadData() {
@@ -16,11 +17,15 @@ const Main = () => {
 
         loadData()
     }, [])
+
+    function handleSelectedCourses(course) {
+        setHours(hours + course.credit)
+    }
     
     return (
         <div className="md:flex gap-6 justify-center">
-            <Courses courses={courses}/>
-            <Details />
+            <Courses courses={courses} handleSelectedCourses={handleSelectedCourses}/>
+            <Details hours={hours}/>
         </div>
     );
 };
