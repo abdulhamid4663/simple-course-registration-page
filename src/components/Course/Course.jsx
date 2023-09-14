@@ -26,7 +26,7 @@ const Course = ({ course, handleSelectedCourses }) => {
                         </div>
                     </div>
                     <div className="w-full">
-                        <button onClick={()=> handleSelectedCourses(course)} className="btn bg-[#2F80ED] hover:bg-[#2F80ED] text-white normal-case text-lg font-semibold w-full">Select</button>
+                        <button onClick={()=> handleSelectedCourses(id, course)} className="btn bg-[#2F80ED] hover:bg-[#2F80ED] text-white normal-case text-lg font-semibold w-full">Select</button>
                     </div>
                 </div>
             </div>

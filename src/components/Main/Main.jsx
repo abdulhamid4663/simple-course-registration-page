@@ -19,12 +19,16 @@ const Main = () => {
         loadData()
     }, [])
 
-    function handleSelectedCourses(course) {
-        setHours(hours + course.credit)
-        const newSelectedCourses = [...selectedCourses, course];
-        setSelectedCourses(newSelectedCourses);
+    function handleSelectedCourses(id, course) {
+        const isExist = selectedCourses.find(course => course.id === id);
+
+        if(!isExist) {
+            setHours(hours + course.credit)
+            const newSelectedCourses = [...selectedCourses, course];
+            setSelectedCourses(newSelectedCourses);
+        }
     }
-    
+
     return (
         <div className="md:flex gap-6 justify-center">
             <Courses courses={courses} handleSelectedCourses={handleSelectedCourses}/>
