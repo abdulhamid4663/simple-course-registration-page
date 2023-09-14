@@ -13,7 +13,7 @@
     "title": "Introduction to Algorithms",
     "description": "Explore algorithms in-depth. Learn design principles, efficiency analysis, and problem-solving. Master algorithms for coding success!",
     "price": 79.99,
-    "credit": 7
+    "credit": 5
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "title": "Introduction to C++ for DSA",
     "description": "Prepare for data structures and algorithms with C++. Dive into linked lists, trees, sorting algorithms, and more. Join us to boost your skills!",
     "price": 69.99,
-    "credit": 5
+    "credit": 3
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "title": "Introduction to OOP Python",
     "description": "Delve into Object-Oriented Programming (OOP) with Python. Learn classes, objects, inheritance, and develop efficient Python code.",
     "price": 89.99,
-    "credit": 8
+    "credit": 6
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "title": "Software Engineering",
     "description": "Embark on a software engineering journey. Explore principles, best practices, requirements, design, coding, testing, and maintenance.",
     "price": 79.99,
-    "credit": 9
+    "credit": 8
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "title": "AWS, Cloud Computing",
     "description": "Dive into AWS and Cloud Computing. Learn cloud architecture, storage, security, scalability, and best practices. Harness the power of the cloud!",
     "price": 99.99,
-    "credit": 10
+    "credit": 1
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "title": "Database (MySQL)",
     "description": "Immerse yourself in database management with a focus on MySQL. Learn database design, querying, optimization, and administration. Gain hands-on experience!",
     "price": 89.99,
-    "credit": 6
+    "credit": 2
   },
   {
     "id": 9,
